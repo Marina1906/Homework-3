@@ -1,121 +1,35 @@
-* {
+*, *::before, *::after {
   box-sizing: border-box;
 }
 
-html,
-body,
-div,
-span,
-applet,
-object,
-iframe,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p,
-blockquote,
-pre,
-a,
-abbr,
-acronym,
-address,
-big,
-cite,
-code,
-del,
-dfn,
-em,
-img,
-ins,
-kbd,
-q,
-s,
-samp,
-small,
-strike,
-strong,
-sub,
-sup,
-tt,
-var,
-b,
-u,
-i,
-center,
-dl,
-dt,
-dd,
-ol,
-ul,
-li,
-fieldset,
-form,
-label,
-legend,
-table,
-caption,
-tbody,
-tfoot,
-thead,
-tr,
-th,
-td,
-article,
-aside,
-canvas,
-details,
-embed,
-figure,
-figcaption,
-footer,
-header,
-hgroup,
-menu,
-nav,
-output,
-ruby,
-section,
-summary,
-time,
-mark,
-audio,
-video {
-  margin: 0;
-  padding: 0;
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote,
+pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var, b, u, i, center,
+dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot,
+thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer,
+header, hgroup, menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+ margin: 0;
+ padding: 0;
 }
 
+img, picture, svg, video {
+  display: block;
+  max-width: 100%;
+}
 /* HTML5 display-role reset for older browsers */
-article,
-aside,
-details,
-figcaption,
-figure,
-footer,
-header,
-hgroup,
-menu,
-nav,
-section {
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
   display: block;
 }
 
-ol,
-ul {
+ol, ul {
   list-style: none;
 }
-
-blockquote,
-q {
+blockquote, q {
   quotes: none;
 }
 
-blockquote:before,
-blockquote:after,
-q:before,
-q:after {
+blockquote:before, blockquote:after, q:before, q:after {
   content: '';
   content: none;
 }
@@ -125,63 +39,97 @@ table {
   border-spacing: 0;
 }
 
-header {
-  background-color: black;
-  color: white;
-  padding: 50px;
+a {
+  font-style: italic;
+  color: #566EAD ;
+}
+
+.header {
   text-align: center;
 }
-
-h1 {
-  font-size: 50px;
-  font-family: 'Times New Roman', Times, serif;
+h1{
+    font-size: 48px;
+    font-weight: 700;
+}
+h2{
+    font-size: 36px;
+    font-weight: 700;
+    /*
+      Da li svaki h2 na stranici ima ove margine
+      Vrlo je verovatno da ce margine biti konzistentne
+      ako nece to biti slucaj mogu utility klase
+    */
+    margin-top: 133px;
+    margin-bottom: 45px;
 }
 
-h2 {
-  font-size: 15px;
-  font-family: 'Times New Roman', Times, serif;
+h3{
+    font-size: 24px;
+    font-weight: 700;
+    padding-top: 25px;
+    font-variant: small-caps;
 }
 
-h3 {
-  font-size: 10px;
-  font-style: italic;
-  font-family: 'Times New Roman', Times, serif;
+.text-white {
+  color: white;
 }
 
-section {
-  font-size: 36px;
-  font-family: 'Times New Roman', Times, serif;
-  font-weight: bold;
-  text-align: justify;
-  font-weight: 700px;
-  line-height: 41.4px;
+.text-black {
+  color: black;
+}
+.author{
+    font-size: 20px;
+    font-weight: 400;
+    font-style: italic;
+    color:white;
+    text-align: center;
+    padding-top: 25px;
+}
+header{
+    background-color: black; 
+    
 }
 
-p {
-  font-size: 24px;
-  font-family: 'Times New Roman', Times, serif;
-  text-align: justify;
-  font-weight: 400px;
-  line-height: 27.6px;
-  max-width: 737px;
-  max-height: 308px;
+.p-50 {
+  padding: 50px;
 }
-div {
-  background-image: url("Best food in Paris 1.png");
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-section  {
-  font-size: 36px;
-  font-family: 'Times New Roman', Times, serif;
-  font-weight: bold;
-  text-align: justify;
-  color: #A16040;
-  font-weight: 700px;
-  line-height: 41.4px;}
 
-div {
-  background-image: url("Best food in Paris 2.png");
-  background-repeat: no-repeat;
-  background-size: cover;
+.dish-name{
+    color: #a16040;
+    font-size: 36px;
+    font-weight: 700;
+    margin: 0; /* sada moras da overajdujes magine*/
+}
+.dish-place{
+    font-size: 20px;
+    font-weight: 400;
+    font-style: italic;
+
+    margin-top: 10px;
+}
+.discription{
+    font-size: 24px;
+    font-weight: 400;
+    text-align: left;
+    text-align: justify;
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+.dish{
+  /*Do max sirine 734, nece biti veci ali moze biti manji*/
+    max-width: 734px;
+    margin: 0 auto;
+}
+
+
+ img{
+    margin: 56px 0;
+    width: 100%;
+    height: 640px;
+    object-fit: cover;
+ }
+
+#Odeon{
+    color: black;
+    font-style: normal;
 }
